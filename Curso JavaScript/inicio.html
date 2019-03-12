@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="javas.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat, repeat;
+    width:auto; 
+    height:auto;
+    background-size: 1290px 670px;
+    }
+    </style>
+</head>
+<body>
+  <script></script>
+  
+  <script src="javas.js"></script>
+    <h1 style="text-align:center ; color: white ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier " >Curso de Java Script</h1>
+   <div style="background:white; width:1300px; height:50px ; margin: 0px;padding: 0 ;"> 
+    <a href="javas.js" style="font-size: 30px ; color: tomato; text-decoration: none; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Java Script    </a>
+    <a href="" style="font-size: 30px ; color:lime; text-decoration: none; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;" >Inicio</a>
+</div>
+<input type="submit" >
+<input type="url">
+<input type="search" placeholder="Agregar" auto>
+<a href="javas.js"><input type="button" value="Acept  "></a>
+
+
+   <script>
+    //Variables
+
+    //var Numero2_='10';//'10' Texto concatenar
+    //const numero1=2 //const no se puede modificar valor
+    //alert(numero+Numero2_);
+    //numero= numero+1;
+    //numero++;
+   // numero--;
+    
+   //console.log(numero);
+
+    //condicionales
+    //var nombre= 'william';
+    //var verdadero= true;//tipo booleano
+    // && "y" / || "o"
+    // if(num>5 && nombre=='william'){
+    // if(!verdadero){//!verdader =distinto
+      //  console.log('verdadero')
+    // }
+    // else{
+     //   console.log('Falso')
+    // }
+
+    //var array =[1,2,3,'william',true];
+    //console.log(array[3])//indicar en que posicion llamar
+    //alert(array)  
+
+    //for(var i=0;i<5;i++){
+     // console.log(array[i]);
+   // }
+    //var i=0;
+    //do{
+      //console.log(i);
+      //i++;
+    //}while(i<4)
+    //var hora=13;
+   // if(hora<12){
+     // console.log('Buenos dias')
+    //}
+    //if(hora>12){
+      //console.log('Buenas tardes')
+    //}
+
+    /*
+    switch(hora){
+      case 10:
+        console.log('Buenos dias, Son las 10 de la mañana');
+        break;
+      case 15:
+        console.log('Buenas Tardes, Son las 15 de la tarde');
+        break;
+      default:
+        console.log('No tengo saludos a esa hora')
+    }
+    */
+    /*
+    var n1=10;
+    var n2=20;
+    var result=n1+n2;
+    console.log(result);
+   
+    function suma(){
+      return console.log(n1+n2)
+    }
+    suma();
+    
+    let a=4;
+     a=5;
+      console.log(a)
+
+    for(let i=0;i<=5;i++){
+      console.log(i)
+    }
+    let i=50;
+    console.log(i)
+  
+    const numero=10;
+    
+    if(true){
+      let numero=100;
+      console.log('Dentro del if' + numero);
+    }
+    console.log('fuera de if:'+ numero)
+
+
+    
+    const num=1;
+    console.log(num);
+    */
+// DOM JavaScript
+
+ 
+  
+
+
+
+    </script>
+<body>
+  <div style="background-color:cornsilk;  padding: 50px;margin-top: 50px" class="container" >
+    <h1 id="titulo">Documeto en HTML</h1>
+    <p id="parrafo">Curso de JavaScript, desde cero </p>
+    <button id="boton" class="btn btn-info">Cambiar</button><!--dentrode button onclick="alert('click')"-->
+
+  </div>
+  <script>
+  var h1=document.getElementById("titulo");
+  console.log(h1.innerHTML);
+  
+  //h1.innerHTML= "A nuevo texto"; //cambia el titulo
+  //h1.style.color="red";
+  //h1.style.backgroundColor="blue";
+
+  var parrafo=document.getElementById("parrafo");
+  
+
+  var boton = document.getElementById("boton");
+  /*btn.onclick=function(){
+    parrafo.style.color="orange";
+  }
+  */
+     function cambiar(){
+       parrafo.style.color="olive";
+       parrafo.style.fontSize="20px";
+    } 
+
+  boton.onclick= cambiar;
+  boton.addEventListener('click',function(){
+   console.log('Me diste un clik');
+   })
+  boton.addEventListener('mouseover',function(){
+   console.log('He detectado el mouse');
+   })
+  boton.addEventListener('mouseout',function(){
+   console.log('Adios raton');
+  })
+  
+
+  </script>
+<body>
+  <h1 id="saludo"></h1>
+  <h1 id="suma">Resultado de la suma es: </h1>
+
+  <script>
+  var salId = document.getElementById('saludo');
+  /*
+  function saludar(nombre){
+    return 'hola ' + nombre;
+  }
+  salId.innerHTML=saludar('William');
+  salId.style.color="olive";
+*/
+  var saludar= nombre => 'Hola '+ nombre;
+  salId.innerHTML=saludar('William Ortega');
+  salId.style.color='olive';
+  
+  var sumarId=document.getElementById('suma');
+  
+  var suma= (num1,num2) => num1+num2;
+  sumarId.innerHTML += suma(10,5);
+  
+  sumarId.style.color="#fff";
+  document.write('hola mundo');
+   </script>
+
+</body>
+</body>
+</body>
+</html>
